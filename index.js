@@ -11,7 +11,7 @@ jbserver.use(express.json())
 jbserver.use(router)
 jbserver.use('/uploads',express.static('./uploads'))
 
-const PORT = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000
 
 jbserver.listen(PORT,()=>{
     console.log(`My jbserver running at port : ${PORT} and is waiting for client request`);
